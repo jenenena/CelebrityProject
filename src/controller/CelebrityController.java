@@ -71,9 +71,79 @@ public class CelebrityController
 		celebrityList.add(toBeAdded);
 	}
 
-	
-	public void playGame()
+	public boolean processGuess(String guess)
 	{
+		boolean matches = false;
 		
+		if(guess.trim().equalsIgnoreCase(currentCelebrity.getAnswer()))
+		{
+			matches = true;
+			celebGameList.remove(0);
+			if(celebGameList.size() > 0)
+			{
+				currentCelebrity = celebGameList.get(0);
+			}
+		}
 	}
+	
+	
+	
+//	public void play()
+//	{
+//		if (celebGameList != null && celebGameList.size() > 0)
+//		{
+//			this.gameCelebrity = celebGameList.get(0))
+//			gameFrame.replaceScreen("GAME");
+//		}
+//	}
+	
+	public boolean validateCelebrity(String name)
+	{
+		boolean validCelebrity = false;
+		if(name.trim().length() >= 4)
+		{
+			validCelebrity = true;
+		}
+		return validCelebrity;
+	}
+	
+	public boolean validateClue(String clue, String type)
+	{
+		boolean validClue = false;
+		if(clue.trim().length() >= 10)
+		{
+			validClue = true;
+			
+			if (type.equalsIgnoreCase("literature"))
+			{
+				String [] temp = clue.split(",");
+				if(temp.length > 1)
+				{
+					validClue = true;
+				}
+				else
+				{
+					validClue = false;
+				}
+			}
+		}
+		return validClue; 
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
