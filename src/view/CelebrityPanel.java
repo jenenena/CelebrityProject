@@ -89,7 +89,7 @@ public class CelebrityPanel extends JPanel
 	/**
 	 * Reference to the game instance.
 	 */
-	private CelebrityGame controller;
+	private CelebrityController controller;
 
 	/**
 	 * Builds the CelebrityPanel and initializes all data members.
@@ -98,7 +98,7 @@ public class CelebrityPanel extends JPanel
 	 *            Reference to the Game passed when the CelebrityPanel is
 	 *            instantiated in the Frame.
 	 */
-	public CelebrityPanel(CelebrityGame controller)
+	public CelebrityPanel(CelebrityController controller)
 	{
 		super();
 		this.controller = controller;

@@ -1,4 +1,4 @@
-package gui;
+package view;
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -12,7 +12,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import javax.swing.SpringLayout;
 
-import gui.CelebrityGame;
+import controller.CelebrityController;
 
 /**
  * The start screen for the CelebrityGame app.
@@ -25,7 +25,7 @@ public class StartPanel extends JPanel
 	/**
 	 * Reference to the Game to call methods.
 	 */
-	private CelebrityGame controller;
+	private CelebrityController controller;
 
 	/**
 	 * The layout manager for the screen.
@@ -116,7 +116,7 @@ public class StartPanel extends JPanel
 	 * @param controller
 	 *            The reference to the game
 	 */
-	public StartPanel(CelebrityGame controller)
+	public StartPanel(CelebrityController controller)
 	{
 		super();
 		this.controller = controller;
